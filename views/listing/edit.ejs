@@ -1,0 +1,50 @@
+<%layout('/layouts/boilerplate')-%>
+<body>
+    
+    <div class="row">
+        <div class="col-8 offset-2 mt-3">
+            <br><br>
+            <h3>Edit Listing</h3>
+            <form action="/listings/<%=listing._id%>?_method=put" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="from-lable">Title</label>
+                    <input type="text" value="<%=listing.title%>"class="form-control" name="listing[title]" required>
+                    <div class="valid-feedback">look's good!</div>
+                    <div class="invalid-feedback">it's maindetory</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="from-lable">Description</label>
+                    <textarea class="form-control"name="listing[description]" required><%=listing.description%></textarea>
+                     <div class="invalid-feedback">plz fill</div>
+                </div>
+                <div class="mb-3">
+                    <p>Previous Main Image</p>
+                    <img src="<%=oriUrl%>" alt="Photo">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="from-lable">Image</label>
+                    <input type="file"class="form-control" name="listing[image]">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="from-lable">Price</label>
+                        <input type="number"class="form-control" value="<%=listing.price%>" name="listing[price]" required>
+                        <div class="invalid-feedback">plz fill proper</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="from-lable">Location</label>
+                        <input type="text"class="form-control" value="<%=listing.location%>" name="listing[location]"required>
+                        <div class="invalid-feedback">plz fill proper</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="contry" class="from-lable">Contry</label>
+                    <input type="text"class="form-control" value="<%=listing.contry%>" name="listing[contry]" required>
+                    <div class="invalid-feedback">plz fill proper</div>
+                </div>  
+                <button class="btn btn-dark edit-btn mt-3">Edit</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</body>

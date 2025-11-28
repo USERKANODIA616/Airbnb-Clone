@@ -1,0 +1,92 @@
+<%layout('/layouts/boilerplate')-%>
+<body>
+	<div class="row">
+		<div class="col-8 offset-2">
+			<br /><br />
+			<h3>Create new Listing</h3>
+			<form
+				action="/listings"
+				method="post"
+				novalidate
+				class="needs-validation"
+				enctype="multipart/form-data"
+			>
+				<div class="mb-3">
+					<label for="title" class="from-lable">Title</label>
+					<input
+						type="text"
+						placeholder="Enter Title"
+						name="listing[title]"
+						class="form-control"
+						required
+					/>
+					<div class="valid-feedback">look's good!</div>
+					<div class="invalid-feedback">it's maindetory</div>
+				</div>
+				<div class="mb-3">
+					<label for="description" class="from-lable"
+						>Description</label
+					>
+					<textarea
+						class="form-control"
+						placeholder="Enter description"
+						name="listing[description]"
+						required
+					></textarea>
+					<div class="invalid-feedback">plz fill</div>
+				</div>
+				<div class="mb-3">
+					<label for="image" class="from-lable">Upload Image</label>
+					<input
+						type="file"
+						class="form-control"
+						name="listing[image]"
+						required
+					/>
+				</div>
+				<div class="row">
+					<div class="mb-3 col-md-4">
+						<label for="price" class="from-lable">Price</label>
+						<input
+							class="form-control"
+							type="number"
+							placeholder="Enter Price"
+							name="listing[price]"
+							required
+						/>
+						<div class="invalid-feedback">plz fill proper</div>
+					</div>
+					<div class="mb-3 col-md-8">
+						<label for="contry" class="from-lable">Contry</label>
+						<input
+						type="text"
+						class="form-control"
+						placeholder="Enter contry name"
+						name="listing[contry]"
+						required
+						/>
+						<div class="invalid-feedback">please fill proper way</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="location" class="from-lable"
+						>Location</label
+					>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Enter Location"
+						name="listing[location]"
+						required
+					/>
+					<div class="invalid-feedback">
+						Price should be vaild
+					</div>
+				</div>
+				<br /><br />
+				<button class="btn btn-dark add-btn">Add</button>
+				<br /><br />
+			</form>
+		</div>
+	</div>
+</body>
