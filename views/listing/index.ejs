@@ -32,7 +32,7 @@
 </style>
 <div class="mt-3">
 	<!-- <h2>All listings</h2> -->
-	<div class="filters">
+	<div class="filters col flex-nowrap overflow-auto gap-2">
 		<div class="filter">
 			<div>
 				<i class="fa-solid fa-fire"></i>
@@ -93,18 +93,17 @@
 			</div>
 			<p>Domes</p>
 		</div>
-		<div class="tax-toggle">
-			<div class="form-check-reverse form-switch">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					role="switch"
-					id="switchCheckDefault"
-				/>
-				<label class="form-check-label" for="switchCheckDefault"
-					>Display total after taxes</label
-				>
-			</div>
+		<div
+			class="tax-toggle border rounded-pill form-switch d-inline-flex align-items-center px-3 py-1"
+		>
+			<span class="me-2 small">Display Taxes</span>
+			<input
+				class="form-check-input m-0"
+				type="checkbox"
+				role="switch"
+				id="switchCheckDefault"
+				style="transform: scale(0.8)"
+			/>
 		</div>
 	</div>
 	<div

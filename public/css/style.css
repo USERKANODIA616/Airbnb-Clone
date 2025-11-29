@@ -104,3 +104,19 @@ body {
 	height: 300px;
 	width: 100vh;
 }
+
+
+@media (max-width: 992px) {
+  .mobile-menu {
+    background: #ffffff;            /* background white */
+    border-radius: 12px;            /* thoda rounded corner */
+    padding: 1rem;                  /* andar space */
+    margin-top: 0.5rem;             /* toggle button se gap */
+    box-shadow: 0 0 10px rgba(0,0,0,0.08); /* halka shadow clean look */
+  }
+
+  .mobile-menu a {
+    display: block;
+    margin-bottom: 8px;            
+  }
+}
