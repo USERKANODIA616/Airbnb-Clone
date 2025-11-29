@@ -12,7 +12,8 @@ const upload = multer({ storage });
 
 //index Route
 router.get("/", warpAsync(listingController.index));
-
+//search listing
+router.get("/search",warpAsync(listingController.searchListing));
 //new Route Form
 router.get("/new", isLoggedIn, warpAsync(listingController.renderNewForm));
 //show
@@ -33,8 +34,6 @@ router.put(
 	upload.single("listing[image]"),
 	warpAsync(listingController.updateListing)
 );
-//search listing
-router.get("/search",warpAsync(listingController.searchListing));
 
 //delete Route
 router.delete("/:id", isLoggedIn, warpAsync(listingController.deleteListing));
